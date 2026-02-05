@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/wedding/HeroSection";
+import WeddingDetails from "@/components/wedding/WeddingDetails";
+import VenueSection from "@/components/wedding/VenueSection";
+import AttireGuide from "@/components/wedding/AttireGuide";
+import TimelineSection from "@/components/wedding/TimelineSection";
+import EntourageSection from "@/components/wedding/EntourageSection";
+import GiftGuide from "@/components/wedding/GiftGuide";
+import LocationGuide from "@/components/wedding/LocationGuide";
+import FAQSection from "@/components/wedding/FAQSection";
+import Footer from "@/components/wedding/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-background">
+      <HeroSection />
+      <WeddingDetails />
+      <VenueSection />
+      <AttireGuide />
+      <TimelineSection />
+      <EntourageSection />
+      <GiftGuide />
+      <LocationGuide />
+      <FAQSection />
+      <Footer />
+    </main>
   );
 };
 
