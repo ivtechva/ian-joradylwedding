@@ -3,7 +3,7 @@
  import floralDivider from "@/assets/floral-divider.png";
  
  const HeroSection = () => {
-   const weddingDate = new Date("2025-06-14T13:30:00");
+  const weddingDate = new Date("2027-02-06T13:30:00");
    const [timeLeft, setTimeLeft] = useState({
      days: 0,
      hours: 0,
@@ -63,8 +63,8 @@
            />
          </div>
  
-         <p className="text-warm-white font-serif text-2xl md:text-3xl tracking-wide mb-8">
-           June 14, 2025 • Saturday • 1:30 PM
+        <p className="text-warm-white font-serif text-2xl md:text-3xl tracking-wide mb-8">
+          February 6, 2027 • Saturday • 1:30 PM
          </p>
  
          {/* Countdown */}

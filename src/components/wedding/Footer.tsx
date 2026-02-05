@@ -20,7 +20,7 @@
            className="w-32 mx-auto mb-6 opacity-50 invert"
          />
  
-         <p className="font-serif text-xl mb-2">June 14, 2025</p>
+          <p className="font-serif text-xl mb-2">February 6, 2027</p>
          <p className="text-primary-foreground/80 mb-8">Saturday • 1:30 PM</p>
  
          <p className="text-primary-foreground/90 max-w-md mx-auto leading-relaxed mb-8">

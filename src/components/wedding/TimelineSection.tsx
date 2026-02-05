@@ -3,7 +3,7 @@
  const TimelineSection = () => {
    const events = [
      {
-       time: "8:30 AM",
+      time: "1:00 PM",
        title: "Guest Arrival",
        description: "Please arrive at the church to find your seats",
      },
@@ -20,7 +20,7 @@
      {
        time: "4:00 PM",
        title: "Reception Begins",
-       description: "Join us at Brooklenez Event Place",
+      description: "Join us at Flor's Garden",
      },
      {
        time: "5:00 PM",

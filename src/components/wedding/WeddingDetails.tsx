@@ -6,19 +6,19 @@
      {
        icon: Calendar,
        title: "Wedding Date",
-       content: "June 14, 2025",
+        content: "February 6, 2027",
        subtitle: "Saturday",
      },
      {
        icon: Clock,
        title: "Wedding Time",
        content: "1:30 PM",
-       subtitle: "Please arrive by 8:30 AM",
+        subtitle: "Please arrive by 1:00 PM",
      },
    ];
  
    const timeline = [
-     { time: "8:30 AM", event: "Guest Arrival" },
+      { time: "1:00 PM", event: "Guest Arrival" },
      { time: "1:30 PM", event: "Ceremony Begins" },
      { time: "3:00 PM", event: "Reception Starts" },
    ];
