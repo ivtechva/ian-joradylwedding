@@ -4,10 +4,10 @@
  const LocationGuide = () => {
    const locations = [
      {
-       name: "Parroquia De Nuestra Señora De La Merced",
+      name: "Transfiguration of Christ Parish Church",
        type: "Church",
        directions: [
-         "Located in Taysan, Batangas",
+        "Located at the parish grounds",
          "Follow the main road towards the town center",
          "The church is visible from the main plaza",
        ],
@@ -15,12 +15,12 @@
        mapUrl: "https://maps.app.goo.gl/kyMq5DGrzzPbVAEW8",
      },
      {
-       name: "Brooklenez Event Place and Restaurant",
+      name: "Flor's Garden",
        type: "Reception Venue",
        directions: [
          "Located in a scenic garden setting",
          "Follow signs from the main highway",
-         "Look for the Brooklenez signage at the entrance",
+        "Look for the Flor's Garden signage at the entrance",
        ],
        parking: "Ample parking available within the venue premises",
        mapUrl: "https://maps.app.goo.gl/nHmDU5dmRnqG8RYZ9",

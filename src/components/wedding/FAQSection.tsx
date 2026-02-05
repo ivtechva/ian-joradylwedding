@@ -16,7 +16,7 @@
      {
        question: "What time should we arrive at the venue?",
        answer:
-         "We recommend arriving at 8:30 AM to give you enough time to find your seat and settle in. The ceremony will start promptly, so please don't be late.",
+          "We recommend arriving at 1:00 PM to give you enough time to find your seat and settle in. The ceremony will start promptly at 1:30 PM, so please don't be late.",
      },
      {
        question: "Are kids allowed at the event?",

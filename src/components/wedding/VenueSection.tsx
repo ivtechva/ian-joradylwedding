@@ -6,15 +6,15 @@
    const venues = [
      {
        type: "Ceremony",
-       name: "Parroquia De Nuestra Señora De La Merced",
-       location: "Taysan",
+      name: "Transfiguration of Christ Parish Church",
+      location: "Parish Church",
        description: "A beautiful sacred space where we will exchange our vows before God and our loved ones.",
        image: churchImage,
        mapUrl: "https://maps.app.goo.gl/kyMq5DGrzzPbVAEW8",
      },
      {
        type: "Reception",
-       name: "Brooklenez Event Place and Restaurant",
+      name: "Flor's Garden",
        location: "Garden Venue",
        description: "An enchanting garden setting where we'll celebrate our union with family and friends.",
        image: venueImage,
