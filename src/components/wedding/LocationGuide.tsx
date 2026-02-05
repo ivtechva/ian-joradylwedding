@@ -1,4 +1,4 @@
- import { MapPin, Car, ExternalLink } from "lucide-react";
+import { MapPin, Car, ExternalLink } from "lucide-react";
  import floralDivider from "@/assets/floral-divider.png";
  
  const LocationGuide = () => {
@@ -12,7 +12,7 @@
          "The church is visible from the main plaza",
        ],
        parking: "Parking available along the church grounds and nearby streets",
-       mapUrl: "https://maps.app.goo.gl/kyMq5DGrzzPbVAEW8",
+      mapUrl: "https://www.google.com/maps/place/Transfiguration+of+Christ+Parish+Church/@13.9731667,121.0763889,17z",
      },
      {
       name: "Flor's Garden",
@@ -23,10 +23,14 @@
         "Look for the Flor's Garden signage at the entrance",
        ],
        parking: "Ample parking available within the venue premises",
-       mapUrl: "https://maps.app.goo.gl/nHmDU5dmRnqG8RYZ9",
+      mapUrl: "https://www.google.com/maps/search/Flor's+Garden+Batangas",
      },
    ];
  
+  const handleOpenMap = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
    return (
      <section className="py-20 px-4 bg-section-cream">
        <div className="max-w-4xl mx-auto">
@@ -79,15 +83,13 @@
                    <p className="text-muted-foreground text-sm">{location.parking}</p>
                  </div>
  
-                 <a
-                   href={location.mapUrl}
-                   target="_blank"
-                   rel="noopener noreferrer"
+                <button
+                  onClick={() => handleOpenMap(location.mapUrl)}
                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm tracking-wide"
                  >
                    View on Google Maps
                    <ExternalLink className="w-4 h-4" />
-                 </a>
+                </button>
                </div>
              </div>
            ))}
