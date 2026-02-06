@@ -79,15 +79,16 @@ import { MapPin, Car, ExternalLink } from "lucide-react";
                    <p className="text-muted-foreground text-sm">{location.parking}</p>
                  </div>
  
-                <a
-                    href={location.mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    onClick={() => {
+                      const w = window.top || window;
+                      w.open(location.mapUrl, '_blank', 'noopener,noreferrer');
+                    }}
                     className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm tracking-wide"
                   >
                     View on Google Maps
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </button>
                </div>
              </div>
            ))}
