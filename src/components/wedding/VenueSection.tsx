@@ -15,18 +15,18 @@ import {
      {
        type: "Ceremony",
       name: "Transfiguration of Christ Parish Church",
-      location: "Parish Church",
-       description: "A beautiful sacred space where we will exchange our vows before God and our loved ones.",
-       image: churchImage,
-      mapUrl: "https://www.google.com/maps/place/Transfiguration+of+Christ+Parish+Church/@13.9731667,121.0763889,17z",
+       location: "M.L. Quezon Street Extension, Brgy. San Roque, Antipolo City",
+        description: "A beautiful sacred space where we will exchange our vows before God and our loved ones.",
+        image: churchImage,
+       mapUrl: "https://maps.app.goo.gl/ZFjaGYNU8EGMYcfQ6",
      },
      {
        type: "Reception",
       name: "Flor's Garden",
-       location: "Garden Venue",
-       description: "An enchanting garden setting where we'll celebrate our union with family and friends.",
-       image: venueImage,
-      mapUrl: "https://www.google.com/maps/search/Flor's+Garden+Batangas",
+        location: "Sitio Tanza 2, Brgy. San Jose, Antipolo City",
+        description: "An enchanting garden setting where we'll celebrate our union with family and friends.",
+        image: venueImage,
+       mapUrl: "https://maps.app.goo.gl/WC53NqumGTBmFxEU7",
      },
    ];
  
