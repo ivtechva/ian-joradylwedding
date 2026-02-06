@@ -27,10 +27,6 @@ import { MapPin, Car, ExternalLink } from "lucide-react";
      },
    ];
  
-  const handleOpenMap = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
    return (
      <section className="py-20 px-4 bg-section-cream">
        <div className="max-w-4xl mx-auto">
@@ -83,13 +79,15 @@ import { MapPin, Car, ExternalLink } from "lucide-react";
                    <p className="text-muted-foreground text-sm">{location.parking}</p>
                  </div>
  
-                <button
-                  onClick={() => handleOpenMap(location.mapUrl)}
-                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm tracking-wide"
-                 >
-                   View on Google Maps
-                   <ExternalLink className="w-4 h-4" />
-                </button>
+                <a
+                    href={location.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-5 py-2 rounded-full transition-all duration-300 text-sm tracking-wide"
+                  >
+                    View on Google Maps
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                </div>
              </div>
            ))}

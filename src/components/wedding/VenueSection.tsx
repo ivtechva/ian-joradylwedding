@@ -30,10 +30,6 @@ import {
      },
    ];
  
-  const handleOpenMap = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
    return (
     <section className="py-20 px-4 bg-section-sage" id="venues">
        <div className="max-w-6xl mx-auto">
@@ -81,13 +77,15 @@ import {
                  <p className="text-muted-foreground mb-6 leading-relaxed">
                    {venue.description}
                  </p>
-                <button
-                  onClick={() => handleOpenMap(venue.mapUrl)}
-                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-6 py-2.5 rounded-full transition-all duration-300 text-sm tracking-wide"
-                 >
-                   View Map
-                   <ExternalLink className="w-4 h-4" />
-                </button>
+                <a
+                    href={venue.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-6 py-2.5 rounded-full transition-all duration-300 text-sm tracking-wide"
+                  >
+                    View Map
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                </div>
              </div>
            ))}
