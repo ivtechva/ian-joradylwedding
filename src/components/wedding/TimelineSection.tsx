@@ -12,21 +12,16 @@
        title: "Ceremony Begins",
        description: "The wedding ceremony will start promptly",
      },
-     {
-       time: "3:00 PM",
-       title: "Cocktails & Photos",
-       description: "Enjoy refreshments while we capture memories",
-     },
-     {
-       time: "4:00 PM",
-       title: "Reception Begins",
-      description: "Join us at Flor's Garden",
-     },
-     {
-       time: "5:00 PM",
-       title: "Dinner & Celebration",
-       description: "Feast, dance, and celebrate with us",
-     },
+      {
+        time: "3:00 PM",
+        title: "Reception Begins",
+        description: "Join us at Flor's Garden",
+      },
+      {
+        time: "5:00 PM",
+        title: "Dinner & Celebration",
+        description: "Feast, dance, and celebrate with us",
+      },
    ];
  
    return (
