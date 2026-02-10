@@ -8,52 +8,52 @@
 
 @layer base {
   :root {
-    /* Blue & Green Theme Colors */
-    --background: 200 30% 97%;
-    --foreground: 200 25% 12%;
+    /* Blue & Green Theme Colors — Darker */
+    --background: 200 25% 94%;
+    --foreground: 200 30% 8%;
 
-    --card: 200 25% 95%;
-    --card-foreground: 200 25% 12%;
+    --card: 200 22% 91%;
+    --card-foreground: 200 30% 8%;
 
-    --popover: 200 30% 97%;
-    --popover-foreground: 200 25% 12%;
+    --popover: 200 25% 94%;
+    --popover-foreground: 200 30% 8%;
 
     /* Deep Teal Primary */
-    --primary: 180 35% 35%;
+    --primary: 180 40% 26%;
     --primary-foreground: 200 30% 97%;
 
-    /* Soft Blue Secondary */
-    --secondary: 200 30% 90%;
-    --secondary-foreground: 180 30% 20%;
+    /* Deeper Blue Secondary */
+    --secondary: 200 28% 84%;
+    --secondary-foreground: 180 35% 14%;
 
-    --muted: 200 20% 92%;
-    --muted-foreground: 200 15% 40%;
+    --muted: 200 18% 87%;
+    --muted-foreground: 200 18% 32%;
 
-    /* Emerald Green Accent */
-    --accent: 160 40% 35%;
+    /* Dark Emerald Accent */
+    --accent: 160 45% 26%;
     --accent-foreground: 200 30% 97%;
 
-    /* Soft Gold */
-    --gold: 45 45% 55%;
+    /* Warm Gold */
+    --gold: 45 50% 48%;
     --gold-foreground: 200 30% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 200 30% 97%;
 
-    --border: 200 20% 85%;
-    --input: 200 20% 88%;
-    --ring: 180 35% 35%;
+    --border: 200 18% 78%;
+    --input: 200 18% 82%;
+    --ring: 180 40% 26%;
 
     --radius: 0.75rem;
 
-    /* Blue & Green Theme Extended */
-    --cream: 200 25% 96%;
-    --sage: 170 30% 42%;
-    --sage-light: 180 25% 85%;
-    --olive: 160 35% 35%;
-    --olive-light: 170 25% 75%;
-    --forest: 190 30% 18%;
-    --warm-white: 200 30% 98%;
+    /* Blue & Green Theme Extended — Darker */
+    --cream: 200 22% 93%;
+    --sage: 170 35% 34%;
+    --sage-light: 180 22% 78%;
+    --olive: 160 40% 26%;
+    --olive-light: 170 28% 65%;
+    --forest: 190 35% 12%;
+    --warm-white: 200 25% 95%;
 
     /* Typography */
     --font-script: 'Great Vibes', cursive;
@@ -61,41 +61,41 @@
     --font-sans: 'Lato', sans-serif;
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(200 20% 30% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(200 20% 30% / 0.12);
-    --shadow-elevated: 0 20px 50px -15px hsl(200 20% 30% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(200 25% 20% / 0.12);
+    --shadow-card: 0 8px 30px -8px hsl(200 25% 20% / 0.18);
+    --shadow-elevated: 0 20px 50px -15px hsl(200 25% 20% / 0.22);
 
-    --sidebar-background: 200 30% 97%;
-    --sidebar-foreground: 200 25% 12%;
-    --sidebar-primary: 180 35% 35%;
+    --sidebar-background: 200 25% 94%;
+    --sidebar-foreground: 200 30% 8%;
+    --sidebar-primary: 180 40% 26%;
     --sidebar-primary-foreground: 200 30% 97%;
-    --sidebar-accent: 200 20% 92%;
-    --sidebar-accent-foreground: 200 25% 12%;
-    --sidebar-border: 200 20% 85%;
-    --sidebar-ring: 180 35% 35%;
+    --sidebar-accent: 200 18% 87%;
+    --sidebar-accent-foreground: 200 30% 8%;
+    --sidebar-border: 200 18% 78%;
+    --sidebar-ring: 180 40% 26%;
   }
 
   .dark {
     /* Keep light theme for wedding site */
-    --background: 200 30% 97%;
-    --foreground: 200 25% 12%;
-    --card: 200 25% 95%;
-    --card-foreground: 200 25% 12%;
-    --popover: 200 30% 97%;
-    --popover-foreground: 200 25% 12%;
-    --primary: 180 35% 35%;
+    --background: 200 25% 94%;
+    --foreground: 200 30% 8%;
+    --card: 200 22% 91%;
+    --card-foreground: 200 30% 8%;
+    --popover: 200 25% 94%;
+    --popover-foreground: 200 30% 8%;
+    --primary: 180 40% 26%;
     --primary-foreground: 200 30% 97%;
-    --secondary: 200 30% 90%;
-    --secondary-foreground: 180 30% 20%;
-    --muted: 200 20% 92%;
-    --muted-foreground: 200 15% 40%;
-    --accent: 160 40% 35%;
+    --secondary: 200 28% 84%;
+    --secondary-foreground: 180 35% 14%;
+    --muted: 200 18% 87%;
+    --muted-foreground: 200 18% 32%;
+    --accent: 160 45% 26%;
     --accent-foreground: 200 30% 97%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 200 30% 97%;
-    --border: 200 20% 85%;
-    --input: 200 20% 88%;
-    --ring: 180 35% 35%;
+    --border: 200 18% 78%;
+    --input: 200 18% 82%;
+    --ring: 180 40% 26%;
   }
 }
 
