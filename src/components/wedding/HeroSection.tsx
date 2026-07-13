@@ -41,8 +41,8 @@
          <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50" />
        </div>
  
-       {/* Content */}
-       <div className="relative z-10 text-center px-4 py-20 animate-fade-in-up">
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 py-10 md:px-12 md:py-14 animate-fade-in-up bg-forest/40 backdrop-blur-md rounded-3xl border border-warm-white/20 shadow-elevated max-w-3xl mx-4">
          <p className="text-warm-white/90 font-serif text-lg md:text-xl tracking-[0.3em] uppercase mb-4">
            Together with their families
          </p>
