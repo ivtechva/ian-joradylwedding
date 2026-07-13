@@ -29,23 +29,48 @@
      return () => clearInterval(timer);
    }, []);
  
-   return (
-     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-       {/* Background Image */}
-       <div className="absolute inset-0">
-         <img
-           src={heroImage}
-           alt="Garden wedding setting"
-           className="w-full h-full object-cover"
-         />
-         <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50" />
-       </div>
- 
-      {/* Content */}
-      <div
-        className="relative z-10 text-center px-6 py-10 md:px-12 md:py-14 animate-fade-in-up backdrop-blur-md rounded-3xl border border-warm-white/25 shadow-elevated max-w-3xl mx-4"
-        style={{ backgroundColor: "hsla(205, 55%, 22%, 0.72)" }}
-      >
+    return (
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Garden wedding setting"
+            className="w-full h-full object-cover"
+          />
+          {/* Blue tint over the garden background */}
+          <div className="absolute inset-0 bg-teal-900/25 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50" />
+        </div>
+
+        {/* Corner blue shading */}
+        <div
+          className="absolute top-0 left-0 w-[55%] h-[55%] pointer-events-none z-[1]"
+          style={{
+            background: "radial-gradient(circle at top left, hsla(205, 55%, 18%, 0.72), transparent 65%)",
+          }}
+        />
+        <div
+          className="absolute top-0 right-0 w-[55%] h-[55%] pointer-events-none z-[1]"
+          style={{
+            background: "radial-gradient(circle at top right, hsla(205, 55%, 18%, 0.72), transparent 65%)",
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[55%] h-[55%] pointer-events-none z-[1]"
+          style={{
+            background: "radial-gradient(circle at bottom left, hsla(205, 55%, 18%, 0.72), transparent 65%)",
+          }}
+        />
+        <div
+          className="absolute bottom-0 right-0 w-[55%] h-[55%] pointer-events-none z-[1]"
+          style={{
+            background: "radial-gradient(circle at bottom right, hsla(205, 55%, 18%, 0.72), transparent 65%)",
+          }}
+        />
+  
+       {/* Content */}
+       <div className="relative z-10 text-center px-6 py-10 md:px-12 md:py-14 animate-fade-in-up max-w-3xl mx-4">
          <p className="text-warm-white/90 font-serif text-lg md:text-xl tracking-[0.3em] uppercase mb-4">
            Together with their families
          </p>
