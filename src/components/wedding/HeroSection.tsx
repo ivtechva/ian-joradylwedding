@@ -42,7 +42,10 @@
        </div>
  
       {/* Content */}
-      <div className="relative z-10 text-center px-6 py-10 md:px-12 md:py-14 animate-fade-in-up bg-forest/40 backdrop-blur-md rounded-3xl border border-warm-white/20 shadow-elevated max-w-3xl mx-4">
+      <div
+        className="relative z-10 text-center px-6 py-10 md:px-12 md:py-14 animate-fade-in-up backdrop-blur-md rounded-3xl border border-warm-white/25 shadow-elevated max-w-3xl mx-4"
+        style={{ backgroundColor: "hsla(205, 55%, 22%, 0.72)" }}
+      >
          <p className="text-warm-white/90 font-serif text-lg md:text-xl tracking-[0.3em] uppercase mb-4">
            Together with their families
          </p>
