@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeroSection from "@/components/wedding/HeroSection";
 import WeddingDetails from "@/components/wedding/WeddingDetails";
 import VenueSection from "@/components/wedding/VenueSection";
+import FlorsGallery from "@/components/wedding/FlorsGallery";
 import AttireGuide from "@/components/wedding/AttireGuide";
 import TimelineSection from "@/components/wedding/TimelineSection";
 import EntourageSection from "@/components/wedding/EntourageSection";
@@ -20,6 +21,7 @@ const Index = () => {
       <HeroSection />
       <WeddingDetails />
       <VenueSection />
+      <FlorsGallery />
       <AttireGuide />
       <TimelineSection />
       <EntourageSection />
