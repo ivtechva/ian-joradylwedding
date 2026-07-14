@@ -1,87 +1,152 @@
 import { useState } from "react";
 import { MapPin, X, ZoomIn } from "lucide-react";
- import churchImage from "@/assets/church.jpg";
- import venueImage from "@/assets/venue.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import {
   Dialog,
   DialogContent,
   DialogClose,
 } from "@/components/ui/dialog";
- 
- const VenueSection = () => {
+import churchImage from "@/assets/church.jpg";
+import venueImage from "@/assets/venue.jpg";
+import floralDivider from "@/assets/floral-divider.png";
+import img1 from "@/assets/flors-gallery/flors-481160.jpg.asset.json";
+import img2 from "@/assets/flors-gallery/flors-481235.jpg.asset.json";
+import img3 from "@/assets/flors-gallery/flors-481249.jpg.asset.json";
+import img4 from "@/assets/flors-gallery/flors-481504.jpg.asset.json";
+import img5 from "@/assets/flors-gallery/flors-487892.jpg.asset.json";
+import img6 from "@/assets/flors-gallery/flors-492399.jpg.asset.json";
+
+const venues = [
+  {
+    type: "Ceremony",
+    name: "Transfiguration of Christ Parish Church",
+    location: "M.L. Quezon Street Extension, Brgy. San Roque, Antipolo City",
+    description: "A beautiful sacred space where we will exchange our vows before God and our loved ones.",
+    image: churchImage,
+    mapUrl: "https://maps.app.goo.gl/ZFjaGYNU8EGMYcfQ6",
+  },
+  {
+    type: "Reception",
+    name: "Flor's Garden",
+    location: "Sitio Tanza 2, Brgy. San Jose, Antipolo City",
+    description: "An enchanting garden setting where we'll celebrate our union with family and friends.",
+    image: venueImage,
+    mapUrl: "https://maps.app.goo.gl/WC53NqumGTBmFxEU7",
+  },
+];
+
+const photos = [
+  { src: img5.url, alt: "Garden ceremony aisle with white florals" },
+  { src: img3.url, alt: "Ceremony backdrop with floral arch" },
+  { src: img2.url, alt: "Infinity pool overlooking the mountains" },
+  { src: img4.url, alt: "Flor's Garden villa exterior" },
+  { src: img6.url, alt: "Main house at Flor's Garden" },
+  { src: img1.url, alt: "Spacious lounge area with high ceilings" },
+];
+
+const VenueSection = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
-   const venues = [
-     {
-       type: "Ceremony",
-      name: "Transfiguration of Christ Parish Church",
-       location: "M.L. Quezon Street Extension, Brgy. San Roque, Antipolo City",
-        description: "A beautiful sacred space where we will exchange our vows before God and our loved ones.",
-        image: churchImage,
-       mapUrl: "https://maps.app.goo.gl/ZFjaGYNU8EGMYcfQ6",
-     },
-     {
-       type: "Reception",
-      name: "Flor's Garden",
-        location: "Sitio Tanza 2, Brgy. San Jose, Antipolo City",
-        description: "An enchanting garden setting where we'll celebrate our union with family and friends.",
-        image: venueImage,
-       mapUrl: "https://maps.app.goo.gl/WC53NqumGTBmFxEU7",
-     },
-   ];
- 
-   return (
+  return (
     <section className="py-20 px-4 bg-section-sage" id="venues">
-       <div className="max-w-6xl mx-auto">
-         <div className="text-center mb-16">
-           <h2 className="font-script text-5xl md:text-6xl text-primary mb-4">
-             Ceremony & Reception
-           </h2>
-           <p className="text-muted-foreground font-serif text-lg max-w-2xl mx-auto">
-             Join us as we celebrate our love in these beautiful venues
-           </p>
-         </div>
- 
-         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-           {venues.map((venue) => (
-             <div
-               key={venue.type}
-               className="card-garden rounded-2xl overflow-hidden transition-all hover:shadow-elevated duration-300"
-             >
-               <div className="relative h-64 overflow-hidden">
-                <div 
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-script text-5xl md:text-6xl text-primary mb-4">
+            Ceremony & Reception
+          </h2>
+          <p className="text-muted-foreground font-serif text-lg max-w-2xl mx-auto">
+            Join us as we celebrate our love in these beautiful venues
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          {venues.map((venue) => (
+            <div
+              key={venue.type}
+              className="card-garden rounded-2xl overflow-hidden transition-all hover:shadow-elevated duration-300"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <div
                   className="absolute inset-0 cursor-pointer group"
                   onClick={() => setSelectedImage({ src: venue.image, alt: venue.name })}
                 >
-                 <img
-                   src={venue.image}
-                   alt={venue.name}
+                  <img
+                    src={venue.image}
+                    alt={venue.name}
                     className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                 />
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                     <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
-                 <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-sans tracking-wide">
-                   {venue.type}
-                 </div>
-               </div>
-               <div className="p-6 md:p-8">
-                 <h3 className="font-serif text-2xl text-foreground mb-2">
-                   {venue.name}
-                 </h3>
-                 <div className="flex items-center gap-2 text-muted-foreground mb-4">
-                   <MapPin className="w-4 h-4" />
-                   <span>{venue.location}</span>
-                 </div>
+                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-sans tracking-wide">
+                  {venue.type}
+                </div>
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-serif text-2xl text-foreground mb-2">
+                  {venue.name}
+                </h3>
+                <div className="flex items-center gap-2 text-muted-foreground mb-4">
+                  <MapPin className="w-4 h-4" />
+                  <span>{venue.location}</span>
+                </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {venue.description}
-                  </p>
-               </div>
-             </div>
-           ))}
-         </div>
-       </div>
+                  {venue.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mb-10">
+          <h3 className="font-script text-4xl md:text-5xl text-primary mb-4">
+            Flor's Garden
+          </h3>
+          <img
+            src={floralDivider}
+            alt="Decorative divider"
+            className="w-32 mx-auto mb-4 opacity-70"
+          />
+          <p className="text-muted-foreground font-serif text-lg">
+            A glimpse of our reception venue
+          </p>
+        </div>
+
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {photos.map((photo, i) => (
+              <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage(photo)}
+                  className="group block w-full overflow-hidden rounded-2xl card-garden"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </button>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
+      </div>
 
       {/* Image Lightbox */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
@@ -98,8 +163,8 @@ import {
           )}
         </DialogContent>
       </Dialog>
-     </section>
-   );
- };
- 
- export default VenueSection;
+    </section>
+  );
+};
+
+export default VenueSection;
