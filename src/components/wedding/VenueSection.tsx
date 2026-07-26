@@ -71,6 +71,30 @@ const VenueSection = () => {
               className="card-garden rounded-2xl overflow-hidden transition-all hover:shadow-elevated duration-300"
             >
               <div className="relative h-64 overflow-hidden">
+                {venue.type === "Reception" ? (
+                  <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
+                    <CarouselContent className="h-64 ml-0">
+                      {photos.map((photo, i) => (
+                        <CarouselItem key={i} className="pl-0 h-64">
+                          <button
+                            type="button"
+                            onClick={() => setSelectedImage(photo)}
+                            className="group block w-full h-full overflow-hidden"
+                          >
+                            <img
+                              src={photo.src}
+                              alt={photo.alt}
+                              loading="lazy"
+                              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </button>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
+                ) : (
                 <div
                   className="absolute inset-0 cursor-pointer group"
                   onClick={() => setSelectedImage({ src: venue.image, alt: venue.name })}
@@ -84,7 +108,8 @@ const VenueSection = () => {
                     <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-sans tracking-wide">
+                )}
+                <div className="absolute top-4 left-4 z-10 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-sans tracking-wide">
                   {venue.type}
                 </div>
               </div>
@@ -99,37 +124,6 @@ const VenueSection = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {venue.description}
                 </p>
-                {venue.type === "Reception" && (
-                  <div className="mt-2">
-                    <p className="text-muted-foreground font-serif text-sm mb-4">
-                      A glimpse of our reception venue
-                    </p>
-                    <Carousel opts={{ align: "start", loop: true }} className="w-full">
-                      <CarouselContent>
-                        {photos.map((photo, i) => (
-                          <CarouselItem key={i}>
-                            <button
-                              type="button"
-                              onClick={() => setSelectedImage(photo)}
-                              className="group block w-full overflow-hidden rounded-xl"
-                            >
-                              <div className="aspect-[4/3] overflow-hidden rounded-xl">
-                                <img
-                                  src={photo.src}
-                                  alt={photo.alt}
-                                  loading="lazy"
-                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                              </div>
-                            </button>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-2" />
-                      <CarouselNext className="right-2" />
-                    </Carousel>
-                  </div>
-                )}
               </div>
             </div>
           ))}
