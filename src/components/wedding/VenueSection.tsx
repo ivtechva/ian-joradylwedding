@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/dialog";
 import churchImage from "@/assets/church.jpg";
 import venueImage from "@/assets/venue.jpg";
-import floralDivider from "@/assets/floral-divider.png";
 import img1 from "@/assets/flors-gallery/flors-481160.jpg.asset.json";
 import img2 from "@/assets/flors-gallery/flors-481235.jpg.asset.json";
 import img3 from "@/assets/flors-gallery/flors-481249.jpg.asset.json";
@@ -100,52 +99,41 @@ const VenueSection = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {venue.description}
                 </p>
+                {venue.type === "Reception" && (
+                  <div className="mt-2">
+                    <p className="text-muted-foreground font-serif text-sm mb-4">
+                      A glimpse of our reception venue
+                    </p>
+                    <Carousel opts={{ align: "start", loop: true }} className="w-full">
+                      <CarouselContent>
+                        {photos.map((photo, i) => (
+                          <CarouselItem key={i}>
+                            <button
+                              type="button"
+                              onClick={() => setSelectedImage(photo)}
+                              className="group block w-full overflow-hidden rounded-xl"
+                            >
+                              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+                                <img
+                                  src={photo.src}
+                                  alt={photo.alt}
+                                  loading="lazy"
+                                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                            </button>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="hidden sm:flex" />
+                      <CarouselNext className="hidden sm:flex" />
+                    </Carousel>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
-
-        <div className="text-center mb-10">
-          <h3 className="font-script text-4xl md:text-5xl text-primary mb-4">
-            Flor's Garden
-          </h3>
-          <img
-            src={floralDivider}
-            alt="Decorative divider"
-            className="w-32 mx-auto mb-4 opacity-70"
-          />
-          <p className="text-muted-foreground font-serif text-lg">
-            A glimpse of our reception venue
-          </p>
-        </div>
-
-        <Carousel
-          opts={{ align: "start", loop: true }}
-          className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
-            {photos.map((photo, i) => (
-              <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/2">
-                <button
-                  type="button"
-                  onClick={() => setSelectedImage(photo)}
-                  className="group block w-full overflow-hidden rounded-2xl card-garden"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={photo.src}
-                      alt={photo.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                </button>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
-        </Carousel>
       </div>
 
       {/* Image Lightbox */}
