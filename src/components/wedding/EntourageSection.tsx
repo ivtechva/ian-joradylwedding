@@ -11,12 +11,14 @@
      "Candle Sponsors": ["Mr. & Mrs. Mendoza", "Mr. & Mrs. Torres"],
      "Cord Sponsors": ["Mr. & Mrs. Bautista", "Mr. & Mrs. Rivera"],
      "Veil Sponsors": ["Mr. & Mrs. Aquino", "Mr. & Mrs. Fernandez"],
-     "Groomsmen": [
-       "Miguel Santos",
-       "Carlos Reyes",
-       "Antonio Garcia",
-       "Rafael Cruz",
-     ],
+      "Groomsmen": [
+        "Best Man: Dwight Del Rosario (Team Karate / PAF)",
+        "Ernest Illustre",
+        "Cedrick Roque",
+        "Erwin Cavite",
+        "Aries Flores",
+        "Allen Santos",
+      ],
      "Bridesmaids": [
        "Maria Santos",
        "Sofia Reyes",
@@ -25,7 +27,7 @@
      ],
      "Flower Girls": ["Little Princess Ana", "Little Princess Mia"],
      "Ring Bearer": ["Young Master Leo"],
-     "Bible Bearer": ["Young Master Marco"],
+      "Bible Bearer": ["Ivan Avena"],
      "Coin Bearer": ["Young Master Julian"],
    };
  
