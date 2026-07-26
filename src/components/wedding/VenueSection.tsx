@@ -125,8 +125,8 @@ const VenueSection = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious className="hidden sm:flex" />
-                      <CarouselNext className="hidden sm:flex" />
+                      <CarouselPrevious className="left-2" />
+                      <CarouselNext className="right-2" />
                     </Carousel>
                   </div>
                 )}
