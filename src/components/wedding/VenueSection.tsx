@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/dialog";
 import churchImage from "@/assets/church.jpg";
 import venueImage from "@/assets/venue.jpg";
-import floralDivider from "@/assets/floral-divider.png";
 import img1 from "@/assets/flors-gallery/flors-481160.jpg.asset.json";
 import img2 from "@/assets/flors-gallery/flors-481235.jpg.asset.json";
 import img3 from "@/assets/flors-gallery/flors-481249.jpg.asset.json";
