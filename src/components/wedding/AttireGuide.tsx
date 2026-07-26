@@ -1,13 +1,11 @@
  import floralDivider from "@/assets/floral-divider.png";
  
  const AttireGuide = () => {
-   const colors = [
-     { name: "Sage Green", color: "bg-sage" },
-     { name: "Beige", color: "bg-secondary" },
-     { name: "Olive", color: "bg-olive" },
-     { name: "Cream", color: "bg-cream" },
-     { name: "Dusty Rose", color: "bg-[hsl(350,30%,70%)]" },
-   ];
+    const colors = [
+      { name: "Sage Green", color: "bg-sage" },
+      { name: "Olive", color: "bg-olive" },
+      { name: "Green", color: "bg-primary" },
+    ];
  
    return (
      <section className="py-20 px-4 bg-section-cream">
