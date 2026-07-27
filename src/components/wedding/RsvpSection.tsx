@@ -3,6 +3,14 @@ import floralDivider from "@/assets/floral-divider.png";
 
 const RSVP_URL = "https://forms.gle/6Vvj7myD5iPvQAZy5";
 
+const openRsvp = () => {
+  try {
+    (window.top || window).open(RSVP_URL, "_blank", "noopener,noreferrer");
+  } catch {
+    window.open(RSVP_URL, "_blank", "noopener,noreferrer");
+  }
+};
+
 const RsvpSection = () => (
   <section className="py-20 px-4 bg-section-cream" id="rsvp">
     <div className="max-w-3xl mx-auto text-center">
@@ -17,16 +25,22 @@ const RsvpSection = () => (
           <QRCodeSVG value={RSVP_URL} size={200} level="M" bgColor="transparent" fgColor="hsl(190 60% 16%)" />
         </div>
         <p className="text-muted-foreground text-sm mt-6 mb-6">Scan with your phone camera</p>
-        <button
-          type="button"
-          onClick={() => (window.top || window).open(RSVP_URL, "_blank")}
-          className="bg-primary text-primary-foreground font-sans tracking-wide px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+        <a
+          href={RSVP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            openRsvp();
+          }}
+          className="inline-block bg-primary text-primary-foreground font-sans tracking-wide px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
         >
           Open RSVP Form
-        </button>
+        </a>
       </div>
     </div>
   </section>
 );
 
 export default RsvpSection;
+
