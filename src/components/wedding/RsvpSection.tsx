@@ -3,14 +3,6 @@ import floralDivider from "@/assets/floral-divider.png";
 
 const RSVP_URL = "https://forms.gle/6Vvj7myD5iPvQAZy5";
 
-const openRsvp = () => {
-  try {
-    (window.top || window).open(RSVP_URL, "_blank", "noopener,noreferrer");
-  } catch {
-    window.open(RSVP_URL, "_blank", "noopener,noreferrer");
-  }
-};
-
 const RsvpSection = () => (
   <section className="py-20 px-4 bg-section-cream" id="rsvp">
     <div className="max-w-3xl mx-auto text-center">
@@ -30,8 +22,12 @@ const RsvpSection = () => (
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => {
-            e.preventDefault();
-            openRsvp();
+            try {
+              const win = (window.top || window).open(RSVP_URL, "_blank", "noopener,noreferrer");
+              if (win) e.preventDefault();
+            } catch {
+              // Let the native anchor tag handle the navigation.
+            }
           }}
           className="inline-block bg-primary text-primary-foreground font-sans tracking-wide px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
         >
@@ -43,4 +39,5 @@ const RsvpSection = () => (
 );
 
 export default RsvpSection;
+
 
