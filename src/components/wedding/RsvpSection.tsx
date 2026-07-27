@@ -17,16 +17,27 @@ const RsvpSection = () => (
           <QRCodeSVG value={RSVP_URL} size={200} level="M" bgColor="transparent" fgColor="hsl(190 60% 16%)" />
         </div>
         <p className="text-muted-foreground text-sm mt-6 mb-6">Scan with your phone camera</p>
-        <button
-          type="button"
-          onClick={() => (window.top || window).open(RSVP_URL, "_blank")}
-          className="bg-primary text-primary-foreground font-sans tracking-wide px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
+        <a
+          href={RSVP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            try {
+              const win = (window.top || window).open(RSVP_URL, "_blank");
+              if (win) e.preventDefault();
+            } catch {
+              // Let the native anchor tag handle the navigation.
+            }
+          }}
+          className="inline-block bg-primary text-primary-foreground font-sans tracking-wide px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
         >
           Open RSVP Form
-        </button>
+        </a>
       </div>
     </div>
   </section>
 );
 
 export default RsvpSection;
+
+
