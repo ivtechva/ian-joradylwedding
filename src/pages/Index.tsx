@@ -8,6 +8,7 @@ import EntourageSection from "@/components/wedding/EntourageSection";
 import GiftGuide from "@/components/wedding/GiftGuide";
 import LocationGuide from "@/components/wedding/LocationGuide";
 import FAQSection from "@/components/wedding/FAQSection";
+import RsvpSection from "@/components/wedding/RsvpSection";
 import Footer from "@/components/wedding/Footer";
 import EnvelopeIntro from "@/components/wedding/EnvelopeIntro";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <GiftGuide />
       <LocationGuide />
       <FAQSection />
+      <RsvpSection />
       <Footer />
     </main>
   );
