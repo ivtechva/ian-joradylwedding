@@ -23,7 +23,7 @@ const RsvpSection = () => (
           rel="noopener noreferrer"
           onClick={(e) => {
             try {
-              const win = (window.top || window).open(RSVP_URL, "_blank", "noopener,noreferrer");
+              const win = (window.top || window).open(RSVP_URL, "_blank");
               if (win) e.preventDefault();
             } catch {
               // Let the native anchor tag handle the navigation.
