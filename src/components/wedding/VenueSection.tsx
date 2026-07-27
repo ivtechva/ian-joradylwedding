@@ -20,6 +20,7 @@ import img3 from "@/assets/flors-gallery/flors-481249.jpg.asset.json";
 import img4 from "@/assets/flors-gallery/flors-481504.jpg.asset.json";
 import img5 from "@/assets/flors-gallery/flors-487892.jpg.asset.json";
 import img6 from "@/assets/flors-gallery/flors-492399.jpg.asset.json";
+import imgEntrance from "@/assets/flors-gallery/flors-entrance.png.asset.json";
 
 const venues = [
   {
@@ -41,6 +42,7 @@ const venues = [
 ];
 
 const photos = [
+  { src: imgEntrance.url, alt: "Flor's Garden entrance signage" },
   { src: img5.url, alt: "Garden ceremony aisle with white florals" },
   { src: img3.url, alt: "Ceremony backdrop with floral arch" },
   { src: img2.url, alt: "Infinity pool overlooking the mountains" },
