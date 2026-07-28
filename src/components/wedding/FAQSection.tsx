@@ -23,11 +23,11 @@
        answer:
          "We love your little ones, but due to space limitations, the event is for adults only.",
      },
-     {
-       question: "Can I bring a +1 guest?",
-       answer:
-         "Due to space limitations, the reception area can only accommodate a limited number of guests. Please refer to your invitation for the number of seats reserved for you.",
-     },
+      {
+        question: "Can I bring a +1 guest?",
+        answer:
+          "To keep our celebration intimate and personal, we are only able to accommodate those guests who have been formally invited. Please refer to your invitation for the number of seats reserved for you, and we kindly ask that you respect this limit.",
+      },
      {
        question: "What should I wear?",
        answer:
