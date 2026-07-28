@@ -29,11 +29,6 @@
           "To keep our celebration intimate and personal, we are only able to accommodate those guests who have been formally invited. Please refer to your invitation for the number of seats reserved for you, and we kindly ask that you respect this limit.",
       },
      {
-       question: "What should I wear?",
-       answer:
-         "We encourage elegant garden formal attire in earth tones, pastels, or nature-inspired colors. Please avoid wearing white or black.",
-     },
-     {
        question: "Will there be transportation provided?",
        answer:
          "Transportation between venues is not provided. We recommend arranging your own transportation or coordinating with fellow guests.",
