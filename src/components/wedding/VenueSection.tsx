@@ -14,13 +14,13 @@ import {
 } from "@/components/ui/dialog";
 import churchImage from "@/assets/church.jpg";
 import venueImage from "@/assets/venue.jpg";
-import img1 from "@/assets/flors-gallery/flors-481160.jpg.asset.json";
-import img2 from "@/assets/flors-gallery/flors-481235.jpg.asset.json";
-import img3 from "@/assets/flors-gallery/flors-481249.jpg.asset.json";
-import img4 from "@/assets/flors-gallery/flors-481504.jpg.asset.json";
-import img5 from "@/assets/flors-gallery/flors-487892.jpg.asset.json";
-import img6 from "@/assets/flors-gallery/flors-492399.jpg.asset.json";
-import imgEntrance from "@/assets/flors-gallery/flors-entrance.png.asset.json";
+import img1 from "@/assets/flors-gallery/flors-1.jpg";
+import img2 from "@/assets/flors-gallery/flors-2.jpg";
+import img3 from "@/assets/flors-gallery/flors-3.jpg";
+import img4 from "@/assets/flors-gallery/flors-4.jpg";
+import img5 from "@/assets/flors-gallery/flors-5.jpg";
+import img6 from "@/assets/flors-gallery/flors-6.jpg";
+import imgEntrance from "@/assets/flors-gallery/flors-entrance.png";
 
 const venues = [
   {
@@ -42,13 +42,13 @@ const venues = [
 ];
 
 const photos = [
-  { src: imgEntrance.url, alt: "Flor's Garden entrance signage" },
-  { src: img5.url, alt: "Garden ceremony aisle with white florals" },
-  { src: img3.url, alt: "Ceremony backdrop with floral arch" },
-  { src: img2.url, alt: "Infinity pool overlooking the mountains" },
-  { src: img4.url, alt: "Flor's Garden villa exterior" },
-  { src: img6.url, alt: "Main house at Flor's Garden" },
-  { src: img1.url, alt: "Spacious lounge area with high ceilings" },
+  { src: imgEntrance, alt: "Flor's Garden entrance signage" },
+  { src: img5, alt: "Garden ceremony aisle with white florals" },
+  { src: img3, alt: "Ceremony backdrop with floral arch" },
+  { src: img2, alt: "Infinity pool overlooking the mountains" },
+  { src: img4, alt: "Flor's Garden villa exterior" },
+  { src: img6, alt: "Main house at Flor's Garden" },
+  { src: img1, alt: "Spacious lounge area with high ceilings" },
 ];
 
 const VenueSection = () => {
